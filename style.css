@@ -1,0 +1,77 @@
+.feature-icon-small {
+  width: 3rem;
+  height: 3rem;
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+.togglebar {
+  justify-content: flex-end;
+}
+
+.togglebar > li {
+  display: flex;
+}
+
+.checkbox {
+  opacity: 0;
+}
+
+.checkbox-label {
+  background-color: grey;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.4s ease, justify-content 0.4s ease;
+  margin-right: 3px;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(calc(110%));
+  background-color: #212529;
+}
+
+@media (max-width: 767.98px) {
+  .checkbox-label {
+    height: 13px;
+    width: 25px;
+  }
+  .checkbox-label .ball {
+    width: 11px;
+    height: 11px;
+  }
+
+  .checkbox:checked + .checkbox-label .ball {
+    transform: translateX(calc(95%));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .checkbox-label {
+    height: 19px;
+    width: 37px;
+  }
+  .checkbox-label .ball {
+    width: 16px;
+    height: 16px;
+  }
+
+  .checkbox:checked + .checkbox-label .ball {
+    transform: translateX(calc(100%));
+  }
+}
